@@ -22,6 +22,11 @@ export class AppComponent {
         }
         else {
           console.log("Successfully Logged in.");
+
+          // Set the Display Name and Email so we can attribute messages to them
+          this.afService.displayName = auth.google.displayName;
+          this.afService.email = auth.google.email;
+
           this.isLoggedIn = true;
           // UPDATE: I forgot this at first. Without it when a user is logged in and goes directly to /login
           // the user did not get redirected to the home page.
