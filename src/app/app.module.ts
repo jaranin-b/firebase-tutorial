@@ -10,6 +10,7 @@ import { AF } from './providers/af';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import {RouterModule, Routes} from "@angular/router";
+import { RegistrationPageComponent } from './registration-page/registration-page.component';
 
 // Must export the config
 export const firebaseConfig = {
@@ -22,14 +23,16 @@ export const firebaseConfig = {
 
 const routes: Routes = [
   { path: '', component: HomePageComponent },
-  { path: 'login', component: LoginPageComponent }
+  { path: 'login', component: LoginPageComponent },
+  { path: 'register', component: RegistrationPageComponent}
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginPageComponent,
-    HomePageComponent
+    HomePageComponent,
+    RegistrationPageComponent
   ],
   imports: [
     BrowserModule,
