@@ -21,9 +21,10 @@ export class HomePageComponent implements OnInit, AfterViewChecked {
   }
 
   ngAfterViewChecked() {
-    this.scrollToBottom();
+    //this.scrollToBottom();
   }
 
+  /*
   scrollToBottom(): void {
     try {
       this.myScrollContainer.nativeElement.scrollTop = this.myScrollContainer.nativeElement.scrollHeight;
@@ -48,5 +49,5 @@ export class HomePageComponent implements OnInit, AfterViewChecked {
       return false;
     else
       return true;
-  }
+  }*/
 }

@@ -4,6 +4,12 @@
       <a class="navbar-brand" href="#">Firebase Crud</a>
     </div>
     <div *ngIf="isLoggedIn" class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li [routerLinkActive]="['active']"><a [routerLink]="['home']">Home</a></li>
+        <li><a href="#">Product & Service</a></li>
+        <li [routerLinkActive]="['active']"><a [routerLink]="['admin']">Admin</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a (click)="logout()">Logout</a></li>
       </ul>

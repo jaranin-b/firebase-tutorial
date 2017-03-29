@@ -11,10 +11,11 @@ import { LoginPageComponent } from './login-page/login-page.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import {RouterModule, Routes} from "@angular/router";
 import { RegistrationPageComponent } from './registration-page/registration-page.component';
+import { AdminPageComponent } from './admin-page/admin-page.component';
 
 // Must export the config
 export const firebaseConfig = {
-  apiKey: "AIzaSyCyUY9GMUlYI1RQHmA3hHJuBR8yEIuR8DQ",
+  apiKey: "yourkey",
   authDomain: "fir-crud-57aaf.firebaseapp.com",
   databaseURL: "https://fir-crud-57aaf.firebaseio.com",
   storageBucket: "fir-crud-57aaf.appspot.com",
@@ -23,8 +24,10 @@ export const firebaseConfig = {
 
 const routes: Routes = [
   { path: '', component: HomePageComponent },
+  { path: 'home', component: HomePageComponent },
   { path: 'login', component: LoginPageComponent },
-  { path: 'register', component: RegistrationPageComponent}
+  { path: 'register', component: RegistrationPageComponent },
+  { path: 'admin', component: AdminPageComponent }
 ];
 
 @NgModule({
@@ -32,7 +35,8 @@ const routes: Routes = [
     AppComponent,
     LoginPageComponent,
     HomePageComponent,
-    RegistrationPageComponent
+    RegistrationPageComponent,
+    AdminPageComponent
   ],
   imports: [
     BrowserModule,
