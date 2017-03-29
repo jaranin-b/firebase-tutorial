@@ -1,9 +1,14 @@
+<nav class="navbar navbar-inverse">
+  <ul class="nav navbar-nav">
+    <li [routerLinkActive]="['active']"><a [routerLink]="['view']">View customers</a></li>
+    <li><a href="#">Add new customer</a></li>
+  </ul>
+</nav>
 <div class="container">
   <div class="row">
     <div class="col-md-8 col-md-offset-2">
-      <p class="navbar-text">aaaaa</p>
-      <p class="navbar-text">bbbbb</p>
-      <p class="navbar-text">ccccc</p>
+      <router-outlet></router-outlet>
     </div>
   </div>
 </div>
+
