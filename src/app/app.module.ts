@@ -14,6 +14,7 @@ import { RegistrationPageComponent } from './registration-page/registration-page
 import { AdminPageComponent } from './admin-page/admin-page.component';
 import { ViewCustomersComponent } from './admin-page/view-customers/view-customers.component';
 import {ADMIN_ROUTES} from "./admin-page/admin.routes";
+import { AddCustomerComponent } from './admin-page/add-customer/add-customer.component';
 
 // Must export the config
 export const firebaseConfig = {
@@ -39,7 +40,8 @@ const routes: Routes = [
     HomePageComponent,
     RegistrationPageComponent,
     AdminPageComponent,
-    ViewCustomersComponent
+    ViewCustomersComponent,
+    AddCustomerComponent
   ],
   imports: [
     BrowserModule,

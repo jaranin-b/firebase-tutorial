@@ -8,8 +8,8 @@ export class AF {
   public email: string;
 
   constructor(public af: AngularFire) {
-    this.messages = this.af.database.list('messages');
-  }
+  this.messages = this.af.database.list('messages');
+}
 
   /**
    * Logs in the user
