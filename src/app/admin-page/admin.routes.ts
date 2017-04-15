@@ -7,3 +7,5 @@ export const ADMIN_ROUTES: Routes = [
   { path: 'view', component: ViewCustomersComponent },
   { path: 'add', component: AddCustomerComponent }
 ];
+
+

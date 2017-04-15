@@ -14,13 +14,7 @@ export class AddCustomerComponent implements OnInit {
 
   ngOnInit() {
     // we will initialize our form here
-    this.customer = {
-      name: '',
-      address: {
-        street: '',
-        postcode: '8000' // set default value to 8000
-      }
-    };
+
   }
 
   save(model: Customer, isValid: boolean) {

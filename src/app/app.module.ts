@@ -15,10 +15,13 @@ import { AdminPageComponent } from './admin-page/admin-page.component';
 import { ViewCustomersComponent } from './admin-page/view-customers/view-customers.component';
 import {ADMIN_ROUTES} from "./admin-page/admin.routes";
 import { AddCustomerComponent } from './admin-page/add-customer/add-customer.component';
+import { ModalComponent } from './components/modal/modal.component';
+import { ModalModule } from 'ngx-bootstrap/modal';
+import { BootstrapModalModule } from 'ng2-bootstrap-modal';
 
 // Must export the config
 export const firebaseConfig = {
-  apiKey: "AIzaSyCyUY9GMUlYI1RQHmA3hHJuBR8yEIuR8DQ",
+  apiKey: "",
   authDomain: "fir-crud-57aaf.firebaseapp.com",
   databaseURL: "https://fir-crud-57aaf.firebaseio.com",
   storageBucket: "fir-crud-57aaf.appspot.com",
@@ -41,14 +44,20 @@ const routes: Routes = [
     RegistrationPageComponent,
     AdminPageComponent,
     ViewCustomersComponent,
-    AddCustomerComponent
+    AddCustomerComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     RouterModule.forRoot(routes),
+    ModalModule.forRoot(),
+    BootstrapModalModule,
     AngularFireModule.initializeApp(firebaseConfig)
+  ],
+  entryComponents: [
+    ModalComponent
   ],
   providers: [AF],
   bootstrap: [AppComponent]
